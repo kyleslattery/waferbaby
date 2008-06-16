@@ -12,6 +12,8 @@ end
 use_orm         :datamapper
 use_test        :rspec
 
+dependencies    'dm-validations'
+
 dependencies    'merb-action-args',
                 'merb-assets',
                 'merb_helpers',
