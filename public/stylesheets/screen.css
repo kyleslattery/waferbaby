@@ -1,15 +1,25 @@
 a {
 text-decoration: none;
-color: #555;
+color: #0099ff;
+}
+
+a:hover {
+background-color: #0099ff;
+color: #fff !important;
 }
 
 body {
-padding: 5%;
+padding: 5% 10%;
 margin: 0;
 background-color: #fff;
 color: #000;
 font-family: verdana, arial, sans-serif;
 font-size: 15px;
+}
+
+div#airlock {
+clear: left;
+padding: 20px 0;
 }
 
 h1 {
@@ -22,12 +32,24 @@ text-transform: uppercase;
 font-size: 100%;
 }
 
-p#summary {
+h2 {
 display: inline;
-padding: 0;
 margin: 0;
+color: #aaa;
+font-size: 100%;
+}
+
+h2 + p {
+display: inline;
+}
+
+p.summary {
+clear: left;
+padding: 5px 0;
+margin: 10px 0 20px 0;
+border-bottom: solid 1px #eee;
 color: #999;
-font-size: 60%;
+font-size: 65%;
 }
 
 ul#navigation {
@@ -39,12 +61,24 @@ text-transform: uppercase;
 font-size: 80%;
 }
 
+ul#navigation + p.summary {
+display: inline;
+padding: 0 3px;
+border: 0;
+}
+
 ul#navigation li {
 display: inline;
 }
 
+ul#navigation li a {
+padding: 3px;
+color: #555;
+}
+
 ul#navigation li[selected] a {
-color: red;
+font-weight: bold;
+color: #0099ff;
 }
 
 ul#navigation li:before {
