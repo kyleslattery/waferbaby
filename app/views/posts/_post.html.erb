@@ -1,0 +1,5 @@
+<div class="post" id="post_<%= @post.id %>">
+<h2><%= link_to_post(@post) %></h2>
+<%= @post.contents %>
+<p class="summary">Posted <%= relative_date(@post.created_on) %></p>
+</div>
