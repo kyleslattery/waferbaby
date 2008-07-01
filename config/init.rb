@@ -12,6 +12,8 @@ end
 use_orm         :datamapper
 use_test        :rspec
 
+dependencies    'BlueCloth'
+
 dependencies    'dm-validations',
                 'dm-timestamps'
 
