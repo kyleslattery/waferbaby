@@ -24,12 +24,19 @@ padding: 20px 0;
 
 h1 {
 float: left;
-padding: 10px;
+padding: 0;
 margin: 0 10px 0 0;
 background-color: #000;
 color: #fff;
 text-transform: uppercase;
 font-size: 100%;
+}
+
+h1 > a {
+display: block;
+padding: 10px;
+margin: 0;
+color: #fff;
 }
 
 h2 {
@@ -45,6 +52,7 @@ display: inline;
 
 p.summary {
 clear: left;
+display: block;
 padding: 5px 0;
 margin: 10px 0 20px 0;
 border-bottom: solid 1px #eee;
