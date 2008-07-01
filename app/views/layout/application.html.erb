@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+<title>waferbaby</title>
+<%= css_include_tag :screen, :media => :screen -%>
+</head>
+<body>
+<h1><a href="/" title="">waferbaby</a></h1>
+
+<ul id="navigation">
+	<li class="about"><a href="/about/" title="">About</a></li>
+	<li class="code"><a href="/code/" title="">Code</a></li>
+	<li class="projects"><a href="/projects/" title="">Projects</a></li>
+</ul>
+
+<p class="summary">Summary, info etc. here.</p>
+
+<div id="airlock">
+<%= catch_content :for_layout %>
+</div>
+
+</body>
+</html>
