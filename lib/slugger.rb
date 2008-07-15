@@ -1,18 +1,18 @@
 require 'iconv'
 
 module Slug
-        def set_slug
-                slug = self.klass.slug_for(self.title) if new_record?
+        def self.for(field)
+                field = Iconv.iconv('ascii//translit//IGNORE', 'utf-8', field).to_s
+
+                field.gsub!(/\W+/, ' ')
+                field.strip!
+                field.downcase!
+                field.gsub!(/\s+/, '-')
+
+                field
         end
         
-        def self.slug_for(title)
-                title = Iconv.iconv('ascii//translit//IGNORE', 'utf-8', title).to_s
-                
-                title.gsub!(/\W+/, ' ')
-                title.strip!
-                title.downcase!
-                title.gsub!(/\s+/, '-')
-                
-                title
+        def slug_for(field_symbol)
+                Slug.for(self.send(field_symbol))
         end
 end
