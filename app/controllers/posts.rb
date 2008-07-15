@@ -2,22 +2,33 @@ class Posts < Application
         provides :xml
 
         def index
-                @posts = Post.all
+                @posts = Post.all(:order => [:created_on.desc])
                 display @posts
         end
         
         def index_by_date(year, month = nil, day = nil)
+                month = '__' if month == nil
+                day   = '__' if day   == nil
+                
+                date    = "#{year}-#{month}-#{day}%"
+                @posts  = Post.all(:created_on.like => date, :order => [:created_on.desc])
+                
+                display @posts, :index
         end
         
         def show
                 @post = Post.get()
                 raise NotFound unless @post
+                
+                @post.is_selected = true
                 display @post
         end
 
         def show_by_slug(slug)
                 @post = Post.first(:slug => slug)
                 raise NotFound unless @post
+                
+                @post.is_selected = true
                 
                 render :show
         end        
