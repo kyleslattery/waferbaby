@@ -1,8 +1,9 @@
-require 'iconv'
+require 'slugger'
 
 class Post
         include DataMapper::Resource
         include DataMapper::Timestamp
+        include Slug
         
         property :id,           Integer, :serial => true
         property :slug,         String
@@ -11,25 +12,15 @@ class Post
         property :created_on,   DateTime
         property :updated_on,   DateTime
         
+        has n,                  :categories, :through => Resource
+        
         validates_present       :title
-        validates_is_unique     :slug        
+        validates_present       :contents
+        validates_is_unique     :slug
+        
+        attr_accessor           :is_selected
 
-        before :save do 
-                set_slug
-        end
-        
-        def set_slug
-                self.slug = Post.slug_for(self.title) if new_record?
-        end
-        
-        def self.slug_for(title)
-                title = Iconv.iconv('ascii//translit//IGNORE', 'utf-8', title).to_s
-                
-                title.gsub!(/\W+/, ' ')
-                title.strip!
-                title.downcase!
-                title.gsub!(/\s+/, '-')
-                
-                return title
-        end
+        before :save do
+                self.slug = self.slug_for(:title) if new_record?
+        end        
 end
