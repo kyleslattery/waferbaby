@@ -1,0 +1,3 @@
+<% for @post in @posts %>
+	<h3><%= link_to_post_year(@post) %>/<%= link_to_post_month(@post) %>/<%= link_to_post_day(@post) %>:</h3> <p><%= link_to_post(@post) %></p>
+<% end %>
