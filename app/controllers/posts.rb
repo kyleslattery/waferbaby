@@ -13,7 +13,7 @@ class Posts < Application
                 date    = "#{year}-#{month}-#{day}%"
                 @posts  = Post.all(:created_on.like => date, :order => [:created_on.desc])
                 
-                display @posts, :index
+                display @posts
         end
         
         def show
