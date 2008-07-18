@@ -3,7 +3,7 @@ require 'slugger'
 class Category
         include DataMapper::Resource
         include DataMapper::Timestamp
-        include Slug
+        include Waferbaby::Slug
         
         property :id,           Integer, :serial => true
         property :slug,         String
