@@ -3,7 +3,8 @@ require 'slugger'
 class Post
         include DataMapper::Resource
         include DataMapper::Timestamp
-        include Slug
+        include Waferbaby::Slug
+        include Waferbaby::ModelDates
         
         property :id,           Integer, :serial => true
         property :slug,         String
@@ -22,5 +23,5 @@ class Post
 
         before :save do
                 self.slug = self.slug_for(:title) if new_record?
-        end        
+        end
 end
