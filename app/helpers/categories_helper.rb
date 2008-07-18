@@ -1,5 +1,7 @@
 module Merb
-    module CategoriesHelper
-
-    end
+        module CategoriesHelper
+                def link_to_category(category, title = category.name)
+                        link_to title, "/archives/#{category.slug}"
+                end
+        end
 end
