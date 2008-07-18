@@ -18,4 +18,5 @@ dependencies    'BlueCloth',
                 'merb-action-args',
                 'merb-assets',
                 'merb_helpers',
-                'merb-parts'
+                'merb-parts',
+                'lib/model_dates'
