@@ -3,8 +3,8 @@ require 'slugger'
 class Post
         include DataMapper::Resource
         include DataMapper::Timestamp
-        include Waferbaby::Slug
-        include Waferbaby::ModelDates
+        include Slug
+        include ModelDates
         
         property :id,           Integer, :serial => true
         property :slug,         String
