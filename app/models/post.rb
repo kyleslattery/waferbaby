@@ -4,7 +4,6 @@ class Post
         include DataMapper::Resource
         include DataMapper::Timestamp
         include Slug
-        include ModelDates
         
         property :id,           Integer, :serial => true
         property :slug,         String
