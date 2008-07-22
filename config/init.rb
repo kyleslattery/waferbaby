@@ -19,4 +19,4 @@ dependencies    'BlueCloth',
                 'merb-assets',
                 'merb_helpers',
                 'merb-parts',
-                'lib/model_dates'
+                'lib/timestamp_extensions'
