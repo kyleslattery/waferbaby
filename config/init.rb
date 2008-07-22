@@ -19,4 +19,5 @@ dependencies    'BlueCloth',
                 'merb-assets',
                 'merb_helpers',
                 'merb-parts',
+                'lib/string_extensions',
                 'lib/timestamp_extensions'
