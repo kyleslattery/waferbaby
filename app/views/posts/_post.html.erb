@@ -1,6 +1,6 @@
 <div class="post" id="post_<%= @post.id %>">
 <h3><%= @post.is_selected ? @post.title : link_to_post(@post) %></h3>
-<%= BlueCloth::new(@post.contents).to_html %>
+<%= BlueCloth::new(@post.is_selected ? @post.contents : @post.contents.first_paragraph).to_html %>
 <p class="summary">
 Written <%= time_lost_in_words(@post.created_on) %> ago (<%= link_to_post_year(@post) %>/<%= link_to_post_month(@post) %>/<%= link_to_post_day(@post) %>).
 <% @post.categories.each do |@category| %>
