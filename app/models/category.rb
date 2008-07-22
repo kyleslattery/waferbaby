@@ -1,9 +1,6 @@
-require 'slugger'
-
 class Category
         include DataMapper::Resource
         include DataMapper::Timestamp
-        include Slug
         
         property :id,           Integer, :serial => true
         property :slug,         String
@@ -13,8 +10,4 @@ class Category
         
         validates_present       :name
         validates_is_unique     :slug
-
-        before :save do 
-                self.slug = self.slug_for(:name) if new_record?
-        end        
 end
