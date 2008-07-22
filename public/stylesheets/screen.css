@@ -28,9 +28,10 @@ padding-top: 10px;
 
 div#content {
 clear: left;
-padding: 30px;
+padding: 25px;
 border: solid 1px #444;
 background-color: #3a3a3a;
+font-size: 90%;
 }
 
 h1 {
