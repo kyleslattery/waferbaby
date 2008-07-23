@@ -20,7 +20,7 @@ font-size: 15px;
 
 div#airlock {
 clear: left;
-max-width: 500px;
+max-width: 700px;
 margin: auto;
 text-align: left;
 padding-top: 10px;
@@ -28,10 +28,28 @@ padding-top: 10px;
 
 div#content {
 clear: left;
+float: left;
+width: 445px;
 padding: 25px;
-border: solid 1px #444;
+margin-right: 10px;
 background-color: #3a3a3a;
+border: solid 1px #444;
 font-size: 90%;
+}
+
+div#sidebar {
+float: left;
+width: 150px;
+padding: 15px 20px;
+background-color: #373737;
+border: solid 1px #444;
+font-size: 70%;
+}
+
+div#sidebar h2 {
+text-transform: uppercase;
+color: #0099ff;
+font-size: 110%;
 }
 
 h1 {
