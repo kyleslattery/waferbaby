@@ -31,5 +31,14 @@ module Merb
                 def url_for_post(post)
                         url_for_post_day(post) + "/#{post.slug}"
                 end
+                
+                def title_of(post)
+                        post.is_selected ? post.title : link_to_post(post)
+                end
+                
+                def contents_of(post)
+                        contents = post.is_selected ? post.contents : post.contents.first_paragraph
+                        BlueCloth::new(contents).to_html
+                end
         end
 end
