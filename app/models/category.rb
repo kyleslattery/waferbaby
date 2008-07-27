@@ -8,6 +8,8 @@ class Category
         property :created_on,   DateTime
         property :updated_on,   DateTime
         
+        has n,                  :posts, :through => Resource
+        
         validates_present       :name
         validates_is_unique     :slug
 end
