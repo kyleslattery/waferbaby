@@ -3,6 +3,6 @@
 <%= contents_of(@post) %>
 <p class="summary">
 Written <%= time_lost_in_words(@post.created_on) %> ago (<%= link_to_post_year(@post) %>/<%= link_to_post_month(@post) %>/<%= link_to_post_day(@post) %>).
-<%= ("Filed under " + @post.categories.collect { |category| link_to_post_category(category) }.join(', ')) if @post.categories.length %>
+<%= ("Filed under " + @post.categories.collect { |category| link_to_post_category(category) }.join(', ')) if @post.categories.length > 0 %>
 </p>
 </div>
