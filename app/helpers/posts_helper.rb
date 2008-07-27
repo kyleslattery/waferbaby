@@ -1,3 +1,8 @@
+#
+# =>    posts_helper.rb
+# =>    Copyright (c) 2008 Daniel Bogan. http://waferbaby.com/
+#
+
 module Merb
         module PostsHelper
                 def link_to_post(post, title = post.title)
@@ -28,11 +33,17 @@ module Merb
                         )
                 end
                 
-                def link_to_post_category(category)
-                        link_to(category.name,
-                                url(:post_category, :category => category.slug),
-                                :title => "View all posts filed under '#{category.name}'."
-                        )
+                def link_to_post_categories(post)
+                        post.categories.collect do |category|
+                                if category.slug == params[:category]
+                                        category.name
+                                else
+                                        link_to(category.name,
+                                                url(:post_category, :category => category.slug),
+                                                :title => "View all posts filed under '#{category.name}'."
+                                        )                                
+                                end
+                        end.join(', ')
                 end
 
                 def url_for_post_year(post)
