@@ -1,6 +1,5 @@
 Merb.logger.info("Compiling routes...")
 Merb::Router.prepare do |r|
-        r.match('/archives/categories/:category').to(:controller => 'posts', :action => 'index_by_category').name(:post_category)
         r.match('/archives/:year/:month/:day/:slug').to(:controller => 'posts', :action => 'show_by_slug').name(:post)
         r.match('/archives/:year/:month/:day').to(:controller => 'posts', :action => 'index_by_date').name(:posts_by_day)
         r.match('/archives/:year/:month').to(:controller => 'posts', :action => 'index_by_date').name(:posts_by_month)
