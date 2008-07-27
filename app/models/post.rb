@@ -1,3 +1,8 @@
+#
+# =>    post.rb
+# =>    Copyright (c) 2008 Daniel Bogan. http://waferbaby.com/
+#
+
 require 'iconv'
 
 class Post

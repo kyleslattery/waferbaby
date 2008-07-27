@@ -1,3 +1,8 @@
+#
+# =>    category.rb
+# =>    Copyright (c) 2008 Daniel Bogan. http://waferbaby.com/
+#
+
 class Category
         include DataMapper::Resource
         include DataMapper::Timestamp
