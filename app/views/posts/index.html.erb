@@ -1,3 +1,7 @@
-<% for @post in @posts %>
-	<%= partial :post %>
+<% unless @posts.nil? %>
+	<% for @post in @posts %>
+		<%= partial :post %>
+	<% end %>
+<% else %>
+<h3>Aw, I'm sorry!</h3> There are no posts here. Just us midgets.
 <% end %>
