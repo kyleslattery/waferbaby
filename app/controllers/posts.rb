@@ -16,6 +16,15 @@ class Posts < Application
                 display @posts
         end
         
+        def index_by_category(category)
+                @category = Category.first(:slug => category)                
+                raise NotFound unless @category && @category.posts
+                
+                @posts = @category.posts
+                
+                display @posts, :index
+        end
+        
         def show
                 @post = Post.get()
                 raise NotFound unless @post
