@@ -1,3 +1,8 @@
+#
+# =>    posts.rb
+# =>    Copyright (c) 2008 Daniel Bogan. http://waferbaby.com/
+#
+
 class Posts < Application
         provides :xml
 

@@ -1,13 +1,14 @@
-class Exceptions < Application
+#
+# =>    exceptions.rb
+# =>    Copyright (c) 2008 Daniel Bogan. http://waferbaby.com/
+#
 
-        # handle NotFound exceptions (404)
+class Exceptions < Application
         def not_found
                 render :format => :html
         end
 
-        # handle NotAcceptable exceptions (406)
         def not_acceptable
                 render :format => :html
         end
-
 end

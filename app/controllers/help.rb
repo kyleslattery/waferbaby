@@ -1,5 +1,9 @@
-class Help < Application
+#
+# =>    help.rb
+# =>    Copyright (c) 2008 Daniel Bogan. http://waferbaby.com/
+#
 
+class Help < Application
         def index
                 render
         end
@@ -7,5 +11,4 @@ class Help < Application
         def show_about
                 render
         end
-
 end
