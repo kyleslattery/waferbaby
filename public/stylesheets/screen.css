@@ -48,9 +48,14 @@ font-size: 70%;
 
 div#sidebar h2 {
 color: #0099ff;
-font-size: 100%;
+font-size: 120%;
 padding: 0;
-margin: 0 0 10px 0;
+margin: 0 0 15px 0;
+}
+
+div#sidebar ul p.summary {
+padding-top: 0;
+font-size: 85%;
 }
 
 div#sidebar ul {
