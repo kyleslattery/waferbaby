@@ -14,6 +14,7 @@ class Category
         property :updated_on,   DateTime
         
         has n,                  :posts, :through => Resource
+        has n,                  :notes, :through => Resource
         
         validates_present       :name
         validates_is_unique     :slug
