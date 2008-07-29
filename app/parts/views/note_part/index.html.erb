@@ -1,0 +1,10 @@
+<h2>Lil' notes.</h2>
+
+<ul>
+<% for @note in @notes %>
+<li>
+<%= @note.contents %><br />
+<p class="summary"><%= @note.created_on %></p>
+</li>
+<% end %>
+</ul>
