@@ -20,7 +20,7 @@ font-size: 15px;
 
 div#airlock {
 clear: left;
-max-width: 700px;
+max-width: 800px;
 margin: auto;
 text-align: left;
 padding-top: 10px;
@@ -29,7 +29,7 @@ padding-top: 10px;
 div#content {
 clear: left;
 float: left;
-width: 450px;
+width: 500px;
 padding: 25px;
 background-color: #3a3a3a;
 border: solid 1px #444;
@@ -38,7 +38,7 @@ font-size: 90%;
 
 div#sidebar {
 float: left;
-width: 146px;
+width: 196px;
 margin-left: 20px;
 padding: 15px;
 background-color: #3c3c3c;
