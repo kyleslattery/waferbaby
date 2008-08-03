@@ -2,7 +2,7 @@
 <h3><%= @post.is_selected ? @post.title : link_to_post(@post) %></h3>
 <%= markup(@post.is_selected ? @post.contents : @post.contents.first_paragraph) %>
 <p class="summary">
-Written <%= time_lost_in_words(@post.created_on) %> ago (<%= link_to_post_created_date(@post) %>).
+Written on <%= link_to_post_created_date(@post) %>.
 <%= "Filed under #{link_to_post_categories(@post)}." if @post.categories.length > 0 %>
 </p>
 </div>
