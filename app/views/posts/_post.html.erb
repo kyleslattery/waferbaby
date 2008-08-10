@@ -1,8 +1,6 @@
 <div class="post" id="post_<%= @post.id %>">
+<p class="date"><%= post_date(@post) %></p>
 <h3><%= @post.is_selected ? @post.title : link_to_post(@post) %></h3>
 <%= markup(@post.is_selected ? @post.contents : @post.contents.first_paragraph) %>
-<p class="summary">
-Written on <%= link_to_post_created_date(@post) %>.
-<%= "Filed under #{link_to_post_categories(@post)}." if @post.categories.length > 0 %>
-</p>
+<p class="categories">This post is <% if @post.categories.length > 0 %>filed under <%= link_to_post_categories(@post) %><% else %>totally unfiled.<% end %></p>
 </div>
