@@ -7,6 +7,10 @@ module DataMapper
                 def created_month
                         created_on.strftime('%m')
                 end
+                
+                def created_month_short_name
+                        created_on.strftime('%b')
+                end
 
                 def created_day
                         created_on.strftime('%d')
