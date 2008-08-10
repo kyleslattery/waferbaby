@@ -18,7 +18,7 @@ class Posts < Application
                 date    = "#{year}-#{month}-#{day}%"
                 @posts  = Post.all(:created_on.like => date, :order => [:created_on.desc])
                 
-                display @posts
+                display @posts, :index
         end
         
         def index_by_category(category)
