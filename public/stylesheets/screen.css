@@ -8,18 +8,6 @@ background-color: #0099ff !important;
 color: #fff !important;
 }
 
-a.date {
-float: left;
-text-align: center;
-text-transform: uppercase;
-background-color: #444;
-color: #fff;
-font-size: 100%;
-font-weight: bold;
-padding: 7px;
-margin: 0 15px 0 0;
-}
-
 body {
 padding: 0px;
 margin: 50px 10px;
@@ -107,10 +95,22 @@ color: #888;
 font-size: 70%;
 }
 
-p.summary {
+p.date {
+float: left;
+width: 30px;
+text-align: center;
+text-transform: uppercase;
+background-color: #444;
+color: #fff;
+font-size: 100%;
+padding: 7px;
+margin: 0 15px 0 0;
+}
+
+p.categories {
 clear: left;
 padding: 8px 0;
-margin: 0 0 20px 0;
+margin: 5px 0 20px 0;
 color: #999;
 font-size: 65%;
 border-bottom: solid 1px #444;
