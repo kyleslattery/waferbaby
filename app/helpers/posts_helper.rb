@@ -13,12 +13,8 @@ module Merb
                         )
                 end
                 
-                def link_to_post_date(post, title = post.created_day)
-                        link_to(title,
-                                url_for_post_day(post),
-                                :title => "View all posts made on #{post.created_year}/#{post.created_month}/#{post.created_day}.",
-                                :class => 'date'
-                        )
+                def post_date(post)
+                        "#{post.created_month_short_name} #{post.created_day}"
                 end
                 
                 def link_to_post_categories(post)
