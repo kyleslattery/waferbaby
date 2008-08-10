@@ -97,14 +97,23 @@ font-size: 70%;
 
 p.date {
 float: left;
-width: 30px;
+width: 35px;
 text-align: center;
 text-transform: uppercase;
+padding: 10px 5px;
+margin: 0 15px 15px 0;
 background-color: #444;
 color: #fff;
-font-size: 100%;
-padding: 7px;
-margin: 0 15px 15px 0;
+font-size: 80%;
+}
+
+p.date span.day {
+font-size: 160%;
+}
+
+p.date span.year {
+font-size: 80%;
+color: #777;
 }
 
 p.categories {
