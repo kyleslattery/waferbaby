@@ -28,8 +28,6 @@ padding-top: 10px;
 
 div#content {
 clear: left;
-float: left;
-width: 500px;
 padding: 25px;
 background-color: #3a3a3a;
 border: solid 1px #444;
@@ -117,7 +115,7 @@ font-size: 160%;
 
 p.date span.year {
 font-size: 80%;
-color: #777;
+color: #999;
 }
 
 p.categories {
