@@ -6,7 +6,7 @@
 module Merb
         module GlobalHelpers
                 def markup(string)
-                        BlueCloth::new(string).to_html
+                        RDiscount.new(string).to_html
                 end
         end
 end
