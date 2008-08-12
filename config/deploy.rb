@@ -2,7 +2,7 @@ set :application,       "waferbaby"
 set :branch,            "master"
 set :deploy_to,         "/usr/local/www/apps/#{application}"
 set :deploy_via,        :remote_cache
-set :repository,        "daniel@waferbaby.com:/usr/local/code/waferbaby.git"
+set :repository,        "git@github.com:waferbaby/waferbaby.git"
 set :runner,            "daniel"
 set :scm,               :git
 set :user,              "daniel"
