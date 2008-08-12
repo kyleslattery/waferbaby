@@ -13,10 +13,6 @@ module Merb
                         )
                 end
                 
-                def post_date(post)
-                        "#{post.created_month_short_name} #{post.created_day}"
-                end
-                
                 def link_to_post_categories(post)
                         post.categories.collect do |category|
                                 if category.slug == params[:category]
@@ -24,8 +20,9 @@ module Merb
                                 else
                                         link_to(category.name,
                                                 url(:post_category, :category => category.slug),
-                                                :title => "View all posts filed under '#{category.name}'.",
-                                                :class => 'tag'
+                                                :title  => "View all posts filed under '#{category.name}'.",
+                                                :class  => 'category',
+                                                :rel    => 'tag'
                                         )                                
                                 end
                         end.join(', ')
