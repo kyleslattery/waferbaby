@@ -12,12 +12,12 @@ end
 use_orm         :datamapper
 use_test        :rspec
 
-dependencies    'BlueCloth',
-                'dm-validations',
+dependencies    'dm-validations',
                 'dm-timestamps',
                 'merb-action-args',
                 'merb-assets',
                 'merb_helpers',
                 'merb-parts',
+                'rdiscount',
                 'lib/string_extensions',
                 'lib/timestamp_extensions'
