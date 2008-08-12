@@ -4,7 +4,7 @@
 #
 
 class Posts < Application
-        provides :xml
+        provides :text
 
         def index
                 @posts = Post.all(:order => [:created_on.desc])
