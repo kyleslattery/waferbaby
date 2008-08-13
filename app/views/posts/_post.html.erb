@@ -1,4 +1,4 @@
-<div class="post" id="post_<%= @post.id %>">
+<div class="post<% if @post.contents.length <= 140 %> small<% end %>" id="post_<%= @post.id %>">
 <p class="date">
 <span class="month"><%= @post.created_month_short_name %></span>
 <span class="day"><%= @post.created_day %></span>
@@ -8,5 +8,5 @@
 <h3><%= @post.is_selected ? @post.title : link_to_post(@post) %></h3>
 <%= markup(@post.contents) %>
 </div>
-<p class="categories">This post is <% if @post.categories.length > 0 %>filed under <%= link_to_post_categories(@post) %><% else %>totally unfiled.<% end %></p>
+<% if @post.categories.length > 0 %><p class="categories"><%= link_to_post_categories(@post) %></p><% end %>
 </div>
