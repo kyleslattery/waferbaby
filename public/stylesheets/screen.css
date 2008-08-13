@@ -45,6 +45,43 @@ margin: 10px 0;
 
 div.post {
 clear: left;
+padding-bottom: 10px;
+margin-bottom: 10px;
+border-bottom: solid 1px #444;
+}
+
+div.post.small {
+font-size: 85%;
+}
+
+div.post.small div.contents {
+margin-left: 10px;
+display: inline;
+}
+
+div.post.small p.categories {
+display: inline;
+font-size: 90%;
+}
+
+div.post.small p.categories:after {
+content: ")";
+}
+
+div.post.small p.categories:before {
+content: "(";
+}
+
+div.post.small p.date {
+float: none;
+display: inline;
+padding: 5px;
+margin: 0;
+}
+
+div.post.small p.date span.day,
+div.post.small p.date span.year {
+font-size: 100%;
 }
 
 div.post div.contents {
@@ -119,12 +156,16 @@ color: #999;
 }
 
 p.categories {
-clear: left;
-padding: 8px 0;
-margin: 5px 0 20px 0;
 color: #999;
 font-size: 65%;
-border-bottom: solid 1px #444;
+}
+
+p.categories:after {
+content: ".";
+}
+
+p.categories:before {
+content: "Filed under ";
 }
 
 ul#navigation {
