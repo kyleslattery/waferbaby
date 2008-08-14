@@ -1,6 +1,13 @@
 Gem.clear_paths
 Gem.path.unshift(Merb.root / "gems")
 
+Merb::BootLoader.before_app_loads do
+        Merb::Slices::config[:merb_auth][:layout] = :application 
+        
+        MA[:use_activation]             = true
+        MA[:forgotten_password]         = true
+end
+
 Merb::BootLoader.after_app_loads do
 end
 
@@ -9,15 +16,17 @@ Merb::Config.use do |c|
         c[:session_store]       = 'datamapper'
 end
 
+
 use_orm         :datamapper
 use_test        :rspec
 
-dependencies    'dm-validations',
-                'dm-timestamps',
-                'merb-action-args',
-                'merb-assets',
-                'merb_helpers',
-                'merb-parts',
-                'rdiscount',
-                'lib/string_extensions',
-                'lib/timestamp_extensions'
+dependency      'dm-validations'
+dependency      'dm-timestamps'
+dependency      'merb-action-args'
+dependency      'merb-assets'
+dependency      'merb-slices'
+dependency      'merb-auth'
+dependency      'merb_helpers'
+dependency      'rdiscount'
+dependency      'lib/string_extensions'
+dependency      'lib/timestamp_extensions'
