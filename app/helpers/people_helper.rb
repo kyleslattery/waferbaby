@@ -1,5 +1,10 @@
-module Merb
-  module PeopleHelper
+#
+# =>    people_helper.rb
+# =>    Copyright (c) 2008 Daniel Bogan. http://waferbaby.com/
+#
 
-  end
-end # Merb
+module Merb
+        module PeopleHelper
+
+        end
+end

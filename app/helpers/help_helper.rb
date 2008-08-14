@@ -1,5 +1,10 @@
-module Merb
-    module HelpHelper
+#
+# =>    help_helper.rb
+# =>    Copyright (c) 2008 Daniel Bogan. http://waferbaby.com/
+#
 
-    end
+module Merb
+        module HelpHelper
+
+        end
 end
