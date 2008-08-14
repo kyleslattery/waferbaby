@@ -6,6 +6,9 @@ Merb::BootLoader.before_app_loads do
         
         MA[:use_activation]             = true
         MA[:forgotten_password]         = true
+        
+        Merb::Mailer.config = {:sendmail_path => '/usr/sbin/sendmail'}
+        Merb::Mailer.delivery_method = :sendmail
 end
 
 Merb::BootLoader.after_app_loads do
