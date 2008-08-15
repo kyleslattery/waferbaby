@@ -6,6 +6,8 @@ Merb::BootLoader.before_app_loads do
         
         MA[:use_activation]             = true
         MA[:forgotten_password]         = true
+        MA[:from_email]                 = "nobody@waferbaby.com"
+        MA[:welcome_subject]            = "Your new waferbaby.com account"
         
         Merb::Mailer.config = {:sendmail_path => '/usr/sbin/sendmail'}
         Merb::Mailer.delivery_method = :sendmail
