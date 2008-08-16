@@ -11,7 +11,12 @@
 <div id="header">
 <h1><a href="<%= url(:posts) %>" title="View the latest random drivel.">waferbaby</a></h1>
 <ul id="navigation">
-<li class="about"><a href="<%= url(:about) %>" title="Come glean some pointless tidbits of information.">About</a></li>
+<li><a href="<%= url(:about) %>" title="Come glean some pointless tidbits of information.">About</a></li>
+<% unless logged_in? %>
+<li><a href="<%= url(:login) %>" title="Come on it! Please?">Log in</a> or <a href="<%= url(:signup) %>" title="Carve that cute lil' face'o yours into the site.">Signup</a></li>
+<% else %>
+<li><a href="<%= url(:logout) %>" title="Fleeeeeeee!">Log out</a></li>
+<% end %>
 </ul>
 </div>
 
