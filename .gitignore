@@ -1,4 +1,4 @@
 .DS_Store
+*.log
 *.tmproj
 database.yml
-logs/
