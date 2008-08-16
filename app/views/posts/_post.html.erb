@@ -2,7 +2,7 @@
 <p class="date">
 <span class="month"><%= @post.created_month_short_name %></span>
 <span class="day"><%= @post.created_day %></span>
-<span class="year"><%= @post.created_year %></span>
+<% if @post.contents.length > 140 %><span class="year"><%= @post.created_year %></span><% end %>
 </p>
 <div class="contents">
 <h3><%= @post.is_selected ? @post.title : link_to_post(@post) %></h3>
