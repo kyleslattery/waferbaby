@@ -70,7 +70,7 @@ border-bottom: solid 1px #444;
 }
 
 div.post.small {
-font-size: 85%;
+font-size: 80%;
 }
 
 div.post.small div.contents {
@@ -92,7 +92,7 @@ content: "(";
 }
 
 div.post.small p.date {
-padding: 5px;
+padding: 3px;
 margin: 0;
 }
 
@@ -106,7 +106,8 @@ margin-left: 65px;
 }
 
 form {
-font-size: 90%;
+padding: 5px 0;
+font-size: 80%;
 }
 
 form p.action {
@@ -136,22 +137,12 @@ color: #fff;
 }
 
 h2 {
-float: left;
-padding: 0 10px 0 0;
-margin: 0;
+padding: 0 0 5px 0;
+margin: 0 0 15px 0;
 text-transform: uppercase;
-font-size: 120%;
+font-size: 100%;
 color: #888;
-}
-
-h2:after {
-content: " >";
-}
-
-h2 + p {
-padding: 5px 0 20px 0;
-margin: 0;
-font-size: 70%;
+border-bottom: solid 1px #555;
 }
 
 h3 {
@@ -175,6 +166,7 @@ float: left;
 width: 200px;
 margin-right: 10px;
 text-align: right;
+color: #aaa;
 }
 
 p#footer {
