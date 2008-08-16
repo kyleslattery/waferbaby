@@ -21,7 +21,6 @@ Merb::Config.use do |c|
         c[:session_store]       = 'datamapper'
 end
 
-
 use_orm         :datamapper
 use_test        :rspec
 
