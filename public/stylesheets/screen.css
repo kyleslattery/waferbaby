@@ -9,8 +9,8 @@ color: #fff !important;
 }
 
 body {
-padding: 0px;
-margin: 50px 10px;
+padding: 0;
+margin: 0 10px;
 background-color: #333;
 color: #ddd;
 text-align: center;
@@ -23,7 +23,6 @@ clear: left;
 max-width: 500px;
 margin: auto;
 text-align: left;
-padding-top: 10px;
 }
 
 div#content {
@@ -41,6 +40,15 @@ font-size: 85%;
 
 div#content ul li, div#content ol li {
 margin: 10px 0;
+}
+
+div#header {
+background: url(/images/headers/1.png) #000 no-repeat;
+padding-top: 200px;
+border-right: solid 1px #444;
+border-bottom: solid 1px #444;
+border-left: solid 1px #444;
+margin-bottom: 10px;
 }
 
 div.post {
@@ -90,13 +98,17 @@ margin-left: 65px;
 
 h1 {
 float: left;
+width: 150px;
 padding: 0;
-margin: 0 20px 10px 0;
+margin: 0;
 background-color: #000;
 color: #fff;
 text-align: center;
 text-transform: uppercase;
-font-size: 150%;
+font-size: 100%;
+border-top: solid 1px #333;
+border-right: solid 1px #333;
+opacity: 0.7;
 }
 
 h1 > a {
@@ -107,8 +119,22 @@ color: #fff;
 }
 
 h2 {
-font-size: 65%;
-font-weight: normal;
+float: left;
+padding: 0 10px 20px 0;
+margin: 0;
+text-transform: uppercase;
+font-size: 120%;
+color: #888;
+}
+
+h2:after {
+content: " >";
+}
+
+h2 + p {
+padding: 5px;
+margin: 0;
+font-size: 70%;
 }
 
 h3 {
@@ -169,16 +195,14 @@ content: "Filed under ";
 }
 
 ul#navigation {
+background-color: #222;
 list-style: none inside;
-padding: 0;
-margin: 0;
+padding: 10px;
+margin: 0 0 0 151px;
 color: #555;
 text-transform: uppercase;
-font-size: 120%;
-}
-
-ul#navigation + p.summary {
-margin-top: 5px;
+border-top: solid 1px #333;
+opacity: 0.9;
 }
 
 ul#navigation li {
@@ -186,7 +210,6 @@ display: inline;
 }
 
 ul#navigation li a {
-padding: 1px;
 }
 
 ul#navigation li[selected] a {
@@ -197,7 +220,7 @@ color: #0099ff;
 ul#navigation li:before {
 content: "/ ";
 }
-
+ 
 ul#navigation li:first-child:before {
 content:"";
 }
