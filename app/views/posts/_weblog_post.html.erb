@@ -1,0 +1,12 @@
+<div class="post" id="post-<%= @post.id %>">
+<p class="date">
+<span class="month"><%= @post.created_month_short_name %></span>
+<span class="day"><%= @post.created_day %></span>
+<span class="year"><%= @post.created_year %></span>
+</p>
+<div class="contents">
+<h3><%= @post.is_selected ? @post.title : link_to_weblog_post(@post) %></h3>
+<%= markup(@post.contents) %>
+</div>
+<% if @post.categories.length > 0 %><p class="categories"><%= link_to_post_categories(@post) %></p><% end %>
+</div>
