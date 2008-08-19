@@ -5,11 +5,18 @@
 
 module Merb
         module PostsHelper
-                def link_to_post(post, title = post.title)
+                def link_to_weblog_post(post, title = post.title)
                         link_to(title,
                                 url_for_post(post),
                                 :title => "View the full '#{post.title}' post.",
                                 :class => 'title'
+                        )
+                end
+                
+                def link_to_micro_post(post)
+                        link_to("#{post.created_time}:",
+                                url_for_post_day(post) + "#at-#{post.created_time}",
+                                :title => "Permalink for this micro post."
                         )
                 end
                 
