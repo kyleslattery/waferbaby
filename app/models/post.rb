@@ -14,8 +14,8 @@ class Post
         property :title,        String
         property :contents,     Text, :lazy => false
         property :type,         Discriminator
-        property :created_on,   DateTime
-        property :updated_on,   DateTime
+        property :created_at,   DateTime
+        property :updated_at,   DateTime
         
         has n,                  :categories, :through => Resource
         

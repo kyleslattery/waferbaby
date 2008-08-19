@@ -10,8 +10,8 @@ class Category
         property :id,           Integer, :serial => true
         property :slug,         String
         property :name,         String
-        property :created_on,   DateTime
-        property :updated_on,   DateTime
+        property :created_at,   DateTime
+        property :updated_at,   DateTime
         
         has n,                  :posts, :through => Resource
         has n,                  :notes, :through => Resource
