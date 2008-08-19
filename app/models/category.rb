@@ -13,8 +13,7 @@ class Category
         property :created_at,   DateTime
         property :updated_at,   DateTime
         
-        has n,                  :posts, :through => Resource
-        has n,                  :notes, :through => Resource
+        has n,                  :posts, :through => Resource, :order => [:created_at.desc]
         
         validates_present       :name
         validates_is_unique     :slug
