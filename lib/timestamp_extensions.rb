@@ -15,6 +15,10 @@ module DataMapper
                 def created_day
                         created_on.strftime('%d')
                 end
+                
+                def created_time
+                        created_on.strftime('%I:%M%p')
+                end
 
                 def updated_year
                         updated_on.strftime('%Y')
