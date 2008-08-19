@@ -1,35 +1,23 @@
 module DataMapper
         module Timestamp
                 def created_year
-                        created_on.strftime('%Y')
+                        created_at.strftime('%Y')
                 end
 
                 def created_month
-                        created_on.strftime('%m')
+                        created_at.strftime('%m')
                 end
                 
                 def created_month_short_name
-                        created_on.strftime('%b')
+                        created_at.strftime('%b')
                 end
 
                 def created_day
-                        created_on.strftime('%d')
+                        created_at.strftime('%d')
                 end
                 
                 def created_time
-                        created_on.strftime('%I:%M%p')
-                end
-
-                def updated_year
-                        updated_on.strftime('%Y')
-                end
-
-                def updated_month
-                        updated_on.strftime('%m')
-                end
-
-                def updated_day
-                        updated_on.strftime('%d')
+                        created_at.strftime('%I:%M%p')
                 end
         end
 end
