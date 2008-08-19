@@ -7,7 +7,7 @@ class Posts < Application
         provides :text
 
         def index
-                @posts = Post.all(:order => [:created_on.desc])
+                @posts = Post.all(:order => [:created_at.desc])
                 display @posts
         end
         
@@ -16,7 +16,7 @@ class Posts < Application
                 day   = '__' if day   == nil
                 
                 date    = "#{year}-#{month}-#{day}%"
-                @posts  = Post.all(:created_on.like => date, :order => [:created_on.desc])
+                @posts  = Post.all(:created_at.like => date, :order => [:created_at.desc])
                 
                 display @posts, :index
         end
