@@ -69,35 +69,35 @@ margin-bottom: 10px;
 border-bottom: solid 1px #444;
 }
 
-div.post.small {
-font-size: 80%;
+div.post.micro {
+font-size: 75%;
 }
 
-div.post.small div.contents {
-margin-left: 10px;
+div.post.micro div.contents {
+margin-left: 19px;
 display: inline;
 }
 
-div.post.small p.categories {
+div.post.micro p.categories {
 display: inline;
 font-size: 90%;
 }
 
-div.post.small p.categories:after {
+div.post.micro p.categories:after {
 content: ")";
 }
 
-div.post.small p.categories:before {
+div.post.micro p.categories:before {
 content: "(";
 }
 
-div.post.small p.date {
-padding: 3px;
+div.post.micro p.date {
+padding: 3px 5px;
 margin: 0;
 }
 
-div.post.small p.date span.day,
-div.post.small p.date span.year {
+div.post.micro p.date span.day,
+div.post.micro p.date span.year {
 font-size: 100%;
 }
 
