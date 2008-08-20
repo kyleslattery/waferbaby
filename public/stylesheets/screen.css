@@ -74,20 +74,18 @@ font-size: 75%;
 }
 
 div.post.micro div.contents {
-margin-left: 19px;
-display: inline;
+margin-left: 65px;
 }
 
-div.post.micro p.categories {
-display: inline;
+div.post.micro span.categories {
 font-size: 90%;
 }
 
-div.post.micro p.categories:after {
+div.post.micro span.categories:after {
 content: ")";
 }
 
-div.post.micro p.categories:before {
+div.post.micro span.categories:before {
 content: "(";
 }
 
@@ -172,8 +170,8 @@ color: #aaa;
 p#footer {
 clear: both;
 padding: 10px 0;
-color: #888;
-font-size: 70%;
+color: #777;
+font-size: 60%;
 }
 
 p.date {
@@ -223,9 +221,6 @@ opacity: 0.9;
 
 ul#navigation li {
 display: inline;
-}
-
-ul#navigation li a {
 }
 
 ul#navigation li[selected] a {
