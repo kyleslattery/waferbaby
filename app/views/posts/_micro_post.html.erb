@@ -6,6 +6,6 @@
 <div class="contents">
 <h3><%= link_to_micro_post(@post) %></h3>
 <%= markup(@post.contents) %>
+<% if @post.categories.length > 0 %><span class="categories"><%= link_to_post_categories(@post) %></span><% end %>
 </div>
-<% if @post.categories.length > 0 %><p class="categories"><%= link_to_post_categories(@post) %></p><% end %>
 </div>
