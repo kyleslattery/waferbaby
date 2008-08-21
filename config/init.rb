@@ -9,6 +9,10 @@ Merb::BootLoader.before_app_loads do
         MA[:from_email]                 = "nobody@waferbaby.com"
         MA[:welcome_subject]            = "Your new waferbaby.com account"
         
+        MA.add_routes do |r|
+                r.match('/people/:login').to(:controller => 'users', :action => 'show_by_login')
+        end
+        
         Merb::Mailer.config = {:sendmail_path => '/usr/sbin/sendmail'}
         Merb::Mailer.delivery_method = :sendmail
 end
