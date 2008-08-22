@@ -1,0 +1,15 @@
+%h2 Log in
+%p Comment, customise things.
+
+- form_tag(:action => url(:login)) do
+  %p
+    %label{:for => 'email'} Email address:
+    = text_field(:name => "email")
+  %p
+    %label{:for => 'password'} Password:
+    = password_field(:name => "password")
+  %p
+    %label{:for => 'remember_me'} Remember me:
+    = checkbox_field(:name => 'remember_me')
+  %p.action
+    = submit_button('Log in')
