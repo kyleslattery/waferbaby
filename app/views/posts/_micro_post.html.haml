@@ -1,0 +1,9 @@
+.post.micro{:id => 'at-' + @post.created_time}
+  %p.date
+    %span.month= @post.created_month_short_name
+    %span.day= @post.created_day
+  .contents
+    %h3= link_to_micro_post(@post)
+    = markup(@post.contents)
+    - if @post.categories.length > 0
+      %span.categories= link_to_post_categories(@post)
