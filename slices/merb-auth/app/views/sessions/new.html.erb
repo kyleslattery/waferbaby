@@ -1,9 +1,0 @@
-<h2>Log in</h2>
-<p>Comment, customise things.</p>
-
-<% form_tag :action => url(:login) do -%>
-<p><label for="email">Email address:</label><%= text_field :name => "email" %></p>
-<p><label for="password">Password:</label><%= password_field :name => "password" %></p>
-<p><label for="remember_me">Remember me:</label><%= checkbox_field :name => 'remember_me' %></p>
-<p class="action"><%= submit_button 'Log in' %></p>
-<% end -%>
