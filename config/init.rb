@@ -13,8 +13,8 @@ Merb::BootLoader.before_app_loads do
                 r.match('/people/:login').to(:controller => 'users', :action => 'show_by_login')
         end
         
-        Merb::Mailer.config = {:sendmail_path => '/usr/sbin/sendmail'}
-        Merb::Mailer.delivery_method = :sendmail
+        Merb::Mailer.config             = {:sendmail_path => '/usr/sbin/sendmail'}
+        Merb::Mailer.delivery_method    = :sendmail
 end
 
 Merb::BootLoader.after_app_loads do
@@ -34,6 +34,7 @@ dependency      'merb-action-args'
 dependency      'merb-assets'
 dependency      'merb-slices'
 dependency      'merb-auth'
+dependency      'merb-haml'
 dependency      'merb_helpers'
 dependency      'rdiscount'
 dependency      'lib/string_extensions'
