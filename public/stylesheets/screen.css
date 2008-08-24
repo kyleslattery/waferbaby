@@ -31,7 +31,7 @@ background-color: #0099ff;
 
 div#airlock {
 clear: left;
-max-width: 500px;
+max-width: 629px;
 margin: auto;
 text-align: left;
 }
@@ -54,11 +54,11 @@ margin: 4px 0;
 }
 
 div#header {
-background: url(/images/headers/1.jpg) #000 no-repeat;
-padding-top: 200px;
+background-color: #000;
 border-right: solid 1px #444;
 border-bottom: solid 1px #444;
 border-left: solid 1px #444;
+padding: 15px;
 margin-bottom: 10px;
 }
 
@@ -67,6 +67,12 @@ clear: left;
 padding-bottom: 10px;
 margin-bottom: 10px;
 border-bottom: solid 1px #444;
+}
+
+div.post img {
+border: solid 1px #333;
+padding: 5px;
+background-color: #ddd;
 }
 
 div.post.micro {
@@ -114,23 +120,16 @@ text-align: right;
 
 h1 {
 float: left;
-width: 150px;
 padding: 0;
-margin: 0;
+margin: 0 20px 0 0;
 background-color: #000;
 color: #fff;
 text-align: center;
 text-transform: uppercase;
 font-size: 100%;
-border-top: solid 1px #333;
-border-right: solid 1px #333;
-opacity: 0.7;
 }
 
-h1 > a {
-display: block;
-padding: 10px;
-margin: 0;
+h1 a {
 color: #fff;
 }
 
@@ -209,14 +208,11 @@ content: "Filed under ";
 }
 
 ul#navigation {
-background-color: #222;
 list-style: none inside;
-padding: 10px;
-margin: 0 0 0 151px;
+padding: 0;
+margin: 0;
 color: #555;
 text-transform: uppercase;
-border-top: solid 1px #333;
-opacity: 0.9;
 }
 
 ul#navigation li {
