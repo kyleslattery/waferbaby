@@ -18,20 +18,9 @@ font-family: verdana, arial, sans-serif;
 font-size: 15px;
 }
 
-button {
-padding: 2px 10px;
-background-color: #555;
-color: #fff;
-border: solid 1px #666;
-}
-
-button:active {
-background-color: #0099ff;
-}
-
 div#airlock {
 clear: left;
-max-width: 629px;
+max-width: 449px;
 margin: auto;
 text-align: left;
 }
@@ -45,12 +34,12 @@ font-size: 90%;
 }
 
 div#content ul, div#content ol {
-padding: 5px 30px;
-font-size: 85%;
+padding: 5px 15px;
+font-size: 75%;
 }
 
 div#content ul li, div#content ol li {
-margin: 4px 0;
+margin: 4px 0 8px 0;
 }
 
 div#header {
@@ -158,9 +147,20 @@ h3 + p {
 display: inline;
 }
 
+input[type=submit] {
+padding: 2px 10px;
+background-color: #555;
+color: #fff;
+border: solid 1px #666;
+}
+
+input[type=submit]:active {
+background-color: #0099ff;
+}
+
 label {
 float: left;
-width: 200px;
+width: 150px;
 margin-right: 10px;
 text-align: right;
 color: #aaa;
@@ -209,14 +209,19 @@ content: "Filed under ";
 
 ul#navigation {
 list-style: none inside;
-padding: 0;
+padding: 2px 0 0 0;
 margin: 0;
 color: #555;
 text-transform: uppercase;
+font-size: 80%;
 }
 
 ul#navigation li {
 display: inline;
+}
+
+ul#navigation li.signup a {
+font-weight: bold;
 }
 
 ul#navigation li[selected] a {
