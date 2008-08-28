@@ -27,7 +27,7 @@ text-align: left;
 
 div#content {
 clear: left;
-padding: 25px;
+padding: 20px;
 background-color: #3a3a3a;
 border: solid 1px #444;
 font-size: 90%;
@@ -51,25 +51,29 @@ padding: 15px;
 margin-bottom: 10px;
 }
 
-div.post {
-clear: left;
-padding-bottom: 10px;
-margin-bottom: 10px;
-border-bottom: solid 1px #444;
+div.contents {
+margin-left: 65px;
 }
 
-div.post img {
+div.contents img {
 border: solid 1px #333;
 padding: 5px;
 background-color: #ddd;
 }
 
-div.post.micro {
-font-size: 75%;
+div.post, div.scrawl {
+clear: left;
+padding: 10px 0;
+margin-bottom: 10px;
+border-top: solid 1px #444;
+}
+
+div.post:first-child {
+background: red;
 }
 
 div.post.micro div.contents {
-margin-left: 65px;
+font-size: 75%;
 }
 
 div.post.micro span.categories {
@@ -84,18 +88,14 @@ div.post.micro span.categories:before {
 content: "(";
 }
 
-div.post.micro p.date {
-padding: 3px 5px;
-margin: 0;
-}
-
-div.post.micro p.date span.day,
-div.post.micro p.date span.year {
-font-size: 100%;
-}
-
-div.post div.contents {
-margin-left: 65px;
+div.shelf {
+float: left;
+text-align: center;
+width: 45px;
+font-size: 80%;
+margin-bottom: 15px;
+background-color: #444;
+color: #fff;
 }
 
 form {
@@ -128,6 +128,11 @@ text-transform: uppercase;
 font-size: 100%;
 color: #888;
 border-bottom: solid 1px #555;
+}
+
+h2 + div {
+border-top: 0 !important;
+padding-top: 0 !important;
 }
 
 h3 {
@@ -171,21 +176,17 @@ padding-top: 10px;
 
 p#footer {
 clear: both;
-padding: 10px 0;
-color: #777;
-font-size: 60%;
+text-transform: uppercase;
+padding: 0;
+margin: 20px 0 0 0;
+color: #666;
+font-size: 80%;
 }
 
 p.date {
-float: left;
-width: 35px;
-text-align: center;
 text-transform: uppercase;
 padding: 10px 5px;
-margin: 0 0 15px 0;
-background-color: #444;
-color: #fff;
-font-size: 80%;
+margin: 0;
 }
 
 p.date span.day {
@@ -195,6 +196,15 @@ font-size: 160%;
 p.date span.year {
 font-size: 80%;
 color: #999;
+}
+
+p.date.small {
+padding: 3px 5px;
+}
+
+p.date.small span.day,
+p.date.small span.month {
+font-size: 75%;
 }
 
 p.categories {
