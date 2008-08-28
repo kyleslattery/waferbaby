@@ -3,22 +3,27 @@
   %head
     %title waferbaby
     = css_include_tag :screen, :media => :screen
-  
+
   %body
     #airlock
       #header
         %h1
-          %a{:href => url(:posts), :title => "View the latest drivel."} waferbaby
+          %a.posts{:href => url(:posts), :title => "View the latest drivel."} waferbaby
         %ul#navigation
-          %li
+          %li.people
             %a{:href => url(:people), :title => "People!"} People
+          %li.wallscrawl
+            %a{:href => url(:wallscrawl), :title => "The voice of the unwashed masses."} 'scrawl
+          %li.about
+            %a{:href => url(:about), :title => "Useless information."} Eh?
           - unless logged_in?
-            %li
+            %li.login
               %a{:href => url(:login), :title => "Sign into your account."} Log in
-            %li
+            %li.signup
               %a{:href => url(:signup), :title => "Carve your name into the community."} Sign up
           - else
-            %li
+            %li.logout
               %a{:href => url(:logout), :title => "Off you go, then."} Log out
-      #content= catch_content :for_layout
-      %p#footer This is waferbaby.
+      #content
+        = catch_content :for_layout
+        %p#footer This is waferbaby. Sorry about that.
