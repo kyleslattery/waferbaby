@@ -1,8 +1,9 @@
-.post{:id => 'post' + @post.id.to_s}
-  %p.date
-    %span.month= @post.created_month_short_name
-    %span.day= @post.created_day
-    %span.year= @post.created_year
+.post{:id => 'post-' + @post.id.to_s}
+  .shelf
+    %p.date
+      %span.month= @post.created_month_short_name
+      %span.day= @post.created_day
+      %span.year= @post.created_year
   .contents
     %h3= @post.is_selected ? @post.title : link_to_weblog_post(@post)
     = markup(@post.contents)
