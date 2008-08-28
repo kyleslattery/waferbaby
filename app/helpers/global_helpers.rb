@@ -6,7 +6,13 @@
 module Merb
         module GlobalHelpers
                 def markup(string)
-                        RDiscount.new(h(string)).to_html
+                        markdown = RDiscount.new(string)
+                        
+                        markdown.smart = true
+                        markdown.filter_html = true
+                        markdown.filter_styles = true
+                        
+                        markdown.to_html
                 end
                 
                 def display_errors_for(object, error_class='errors')
