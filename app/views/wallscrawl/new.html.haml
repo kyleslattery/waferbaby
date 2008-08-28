@@ -1,0 +1,7 @@
+%h2 Scrawl!
+= display_errors_for(@scrawl)
+= form_for(@scrawl, :action => url(:wallscrawl)) do
+  %p
+    = text_area(:contents)
+  %p.action
+    = submit('Scrawl')

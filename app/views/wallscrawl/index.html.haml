@@ -1,0 +1,7 @@
+- unless @scrawls.length < 1
+  %h2= "Scrawls (" + link_to("Add", url(:new_wallscrawl)) + ")"
+  - for @scrawl in @scrawls
+    = partial :scrawl
+- else
+  %h2 Aw, I'm sorry!
+  %p There are no scrawls here.

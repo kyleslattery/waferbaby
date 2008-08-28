@@ -1,0 +1,8 @@
+.scrawl{:id => 'scrawl-' + @scrawl.id.to_s}
+  .shelf
+    %p.date.small
+      %span.month= @scrawl.created_month_short_name
+      %span.day= @scrawl.created_day
+  .contents
+    %h3= "#{@scrawl.person.login}:" if @scrawl.person
+    = markup(@scrawl.contents)
