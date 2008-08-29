@@ -176,8 +176,8 @@ padding-top: 10px;
 p#footer {
 clear: both;
 text-transform: uppercase;
-padding: 0;
-margin: 20px 0 0 0;
+padding: 10px 0 0 0;
+margin: 0;
 color: #666;
 font-size: 80%;
 }
@@ -252,6 +252,18 @@ content: "/ ";
  
 ul#navigation li:first-child:before {
 content:"";
+}
+
+ul#people {
+list-style: none inside;
+padding: 0 !important;
+margin: 0 !important;
+}
+
+ul#people li {
+display: block;
+float: left;
+width: 25%;
 }
 
 ul.errors {
