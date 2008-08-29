@@ -64,7 +64,6 @@ background-color: #ddd;
 div.post, div.scrawl {
 clear: left;
 padding: 10px 0;
-margin-bottom: 10px;
 border-top: solid 1px #444;
 }
 
@@ -93,7 +92,7 @@ float: left;
 text-align: center;
 width: 45px;
 font-size: 80%;
-margin-bottom: 15px;
+margin-bottom: 10px;
 background-color: #444;
 color: #fff;
 }
