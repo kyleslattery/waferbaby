@@ -11,17 +11,19 @@
           %a.posts{:href => url(:posts), :title => "View the latest drivel."} waferbaby
         %ul#navigation
           %li.wallscrawl
-            %a{:href => url(:wallscrawl), :title => "The voice of the unwashed masses."} 'scrawl
+            = link_to("'scrawl", url(:wallscrawl), :title => "The voice of the unwashed masses.")
+          %li.people
+            = link_to("People", url(:people), :title => "The humans what make the site.")
           %li.about
-            %a{:href => url(:about), :title => "Useless information."} Eh?
+            = link_to("Eh?", url(:about), :title => "The most useless page like, wow, evar.")
           - unless logged_in?
             %li.login
-              %a{:href => url(:login), :title => "Sign into your account."} Log in
+              = link_to("Log in", url(:login), :title => "Sign into your account.")
             %li.signup
-              %a{:href => url(:signup), :title => "Carve your name into the community."} Sign up
+              = link_to("Sign up", url(:signup), :title => "Carve your name into the community.")
           - else
             %li.logout
-              %a{:href => url(:logout), :title => "Off you go, then."} Log out
+              = link_to("Log out", url(:logout), :title => "Don't leave me!")
       #content
         = catch_content :for_layout
         %p#footer This is waferbaby. Sorry about that.
