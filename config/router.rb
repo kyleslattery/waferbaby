@@ -4,12 +4,12 @@ Merb::Router.prepare do |r|
 
         r.match('/about').to(:controller => 'help', :action => 'show_about').name(:about)
   
-        r.match('/archives/categories/:category').to(:controller => 'posts', :action => 'index_by_category').name(:archive_category)
-        r.match('/archives/:created_year').to(:controller => 'posts', :action => 'index_by_date').name(:archives_by_year)
-        r.match('/archives/:created_year/:created_month').to(:controller => 'posts', :action => 'index_by_date').name(:archives_by_month)
-        r.match('/archives/:created_year/:created_month/:created_day').to(:controller => 'posts', :action => 'index_by_date').name(:archives_by_day)
+        r.match('/posts/categories/:category').to(:controller => 'posts', :action => 'index_by_category').name(:post_category)
+        r.match('/posts/:created_year').to(:controller => 'posts', :action => 'index_by_date').name(:posts_by_year)
+        r.match('/posts/:created_year/:created_month').to(:controller => 'posts', :action => 'index_by_date').name(:posts_by_month)
+        r.match('/posts/:created_year/:created_month/:created_day').to(:controller => 'posts', :action => 'index_by_date').name(:posts_by_day)
         
-        r.resources(:archives, :controller => 'posts', :keys => ['created_year', 'created_month', 'created_day', 'slug']) do |posts|
+        r.resources(:posts, :keys => ['created_year', 'created_month', 'created_day', 'slug']) do |posts|
                 posts.resources(:comments)
         end
         
