@@ -1,7 +1,7 @@
 %h2 Sign up
 %p Come and join the party. It's all happening here. Wee.
 
-= display_errors_for @ivar
+= display_errors_for(@ivar)
 = form_for(@ivar, :action => url(:people)) do
   %p= text_field(:email, :label => "Email address:")
   %p= text_field(:login, :label => "Username:")
