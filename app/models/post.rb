@@ -18,6 +18,7 @@ class Post
         property :updated_at,   DateTime
         
         has n,                  :categories, :through => Resource
+        has n,                  :comments, :through => Resource
         
         validates_present       :contents
         
