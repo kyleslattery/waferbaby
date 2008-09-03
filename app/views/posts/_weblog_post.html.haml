@@ -5,7 +5,7 @@
       %span.day= @post.created_day
       %span.year= @post.created_year
   .contents
-    %h3= @post.is_selected ? @post.title : link_to_weblog_post(@post)
+    %h3= @post.is_selected ? @post.title : link_to(@post.title, url(:archive, @post), :title => "View '#{h(@post.title)}'.")
     = markup(@post.contents)
     - if @post.categories.length > 0
       %p.categories= link_to_post_categories(@post)
