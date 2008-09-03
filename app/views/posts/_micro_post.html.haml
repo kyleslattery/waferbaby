@@ -4,7 +4,7 @@
       %span.month= @post.created_month_short_name
       %span.day= @post.created_day
   .contents
-    %h3= link_to("#{@post.created_time}:", url(:archives_by_day, @post) + "##{@post.created_time}", :title => "Permalink for this micro post.")
+    %h3= link_to("#{@post.created_time}:", url(:posts_by_day, @post) + "##{@post.created_time}", :title => "Permalink for this micro post.")
     = markup(@post.contents)
     - if @post.categories.length > 0
       %span.categories= link_to_post_categories(@post)
