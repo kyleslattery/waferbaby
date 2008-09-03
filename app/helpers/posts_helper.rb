@@ -5,50 +5,19 @@
 
 module Merb
         module PostsHelper
-                def link_to_weblog_post(post, title = post.title)
-                        link_to(title,
-                                url_for_post(post),
-                                :title => "View the full '#{post.title}' post.",
-                                :class => 'title'
-                        )
-                end
-                
-                def link_to_micro_post(post)
-                        link_to("#{post.created_time}:",
-                                url_for_post_day(post) + "#at-#{post.created_time}",
-                                :title => "Permalink for this micro post."
-                        )
-                end
-                
                 def link_to_post_categories(post)
                         post.categories.collect do |category|
                                 if category.slug == params[:category]
                                         category.name
                                 else
                                         link_to(category.name,
-                                                url(:post_category, :category => category.slug),
+                                                url(:posts, :category => category.slug),
                                                 :title  => "View all posts filed under '#{category.name}'.",
                                                 :class  => 'category',
                                                 :rel    => 'tag'
                                         )                                
                                 end
                         end.join(', ')
-                end
-
-                def url_for_post_year(post)
-                        "/archives/#{post.created_year}"
-                end
-
-                def url_for_post_month(post)
-                        url_for_post_year(post) + "/#{post.created_month}"
-                end
-                
-                def url_for_post_day(post)
-                        url_for_post_month(post) + "/#{post.created_day}"
-                end
-                
-                def url_for_post(post)
-                        url_for_post_day(post) + "/#{post.slug}"
                 end
         end
 end
