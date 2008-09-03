@@ -10,7 +10,7 @@ Merb::BootLoader.before_app_loads do
         MA[:welcome_subject]            = "Your new waferbaby.com account"
         
         MA.add_routes do |r|
-                r.match('/people/:login').to(:controller => 'users', :action => 'show_by_login')
+                r.match('/people/:login').to(:controller => 'users', :action => 'show').name(:profile)
         end
         
         Merb::Mailer.config             = {:sendmail_path => '/usr/sbin/sendmail'}
@@ -37,5 +37,4 @@ dependency      'merb-auth'
 dependency      'merb-haml'
 dependency      'merb_helpers'
 dependency      'rdiscount'
-dependency      'lib/string_extensions'
 dependency      'lib/timestamp_extensions'
