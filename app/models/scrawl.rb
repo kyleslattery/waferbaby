@@ -1,8 +1,9 @@
 class Scrawl
         include DataMapper::Resource
-
+        include DataMapper::Timestamp
+        
         property :id,           Integer, :serial => true
-        property :contents,     Text, :lazy => false
+        property :contents,     Text
         property :created_at,   DateTime
         property :updated_at,   DateTime
         
