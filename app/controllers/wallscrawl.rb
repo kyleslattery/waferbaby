@@ -36,6 +36,7 @@ class Wallscrawl < Application
         def create
                 @scrawl = Scrawl.new(params[:scrawl])
                 @scrawl.person = current_person
+                
                 if @scrawl.save
                         redirect url(:wallscrawl)
                 else
@@ -49,8 +50,7 @@ class Wallscrawl < Application
                 raise NotFound unless @scrawl
                 raise BadRequest unless @scrawl.person == current_person
                 
-                @scrawl.attributes = params[:scrawl]
-                if @scrawl.save
+                if @scrawl.update_attributes(params[:scrawl]) || !@scrawl.dirty?
                         redirect url(:scrawl, @scrawl)
                 else
                         raise BadRequest
