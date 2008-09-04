@@ -4,5 +4,5 @@
       %span.month= @scrawl.created_month_short_name
       %span.day= @scrawl.created_day
   .contents
-    %h3= "#{@scrawl.person.login}:" if @scrawl.person
+    %h3= link_to(@scrawl.person.login + ":", url(:profile, @scrawl.person), :title => "View more about '#{h(@scrawl.person.login)}'.")
     = markup(@scrawl.contents)
