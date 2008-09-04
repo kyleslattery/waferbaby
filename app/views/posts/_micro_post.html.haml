@@ -1,10 +1,11 @@
 .post.micro{:id => 'at-' + @post.created_time}
   .shelf
     %p.date.small
-      %span.month= @post.created_month_short_name
-      %span.day= @post.created_day
+      %a{:href => url(:posts_by_day, @post) + "#at-#{@post.created_time}", :title => "Permalink for this post."}
+        %span.month= @post.created_month_short_name
+        %span.day= @post.created_day
+        %span.time= @post.created_time
   .contents
-    %h3= link_to("#{@post.created_time}:", url(:posts_by_day, @post) + "#at-#{@post.created_time}", :title => "Permalink for this micro post.")
     = markup(@post.contents)
     - if @post.categories.length > 0
       %span.categories= link_to_post_categories(@post)
