@@ -75,6 +75,10 @@ div.post.micro div.contents {
 font-size: 75%;
 }
 
+div.post.micro div.contents p {
+display: inline;
+}
+
 div.post.micro span.categories {
 font-size: 90%;
 }
@@ -90,7 +94,7 @@ content: "(";
 div.shelf {
 float: left;
 text-align: center;
-width: 45px;
+width: 50px;
 font-size: 80%;
 margin-bottom: 10px;
 background-color: #444;
@@ -113,7 +117,7 @@ background-color: #000;
 color: #fff;
 text-align: center;
 text-transform: uppercase;
-font-size: 100%;
+font-size: 120%;
 }
 
 h1 a {
@@ -124,7 +128,8 @@ h2 {
 padding: 0 0 5px 0;
 margin: 0 0 15px 0;
 text-transform: uppercase;
-font-size: 100%;
+font-size: 90%;
+font-weight: normal;
 color: #888;
 border-bottom: solid 1px #555;
 }
@@ -175,7 +180,6 @@ padding-top: 10px;
 
 p#footer {
 clear: both;
-text-transform: uppercase;
 padding: 10px 0 0 0;
 margin: 0;
 color: #666;
@@ -184,26 +188,41 @@ font-size: 80%;
 
 p.date {
 text-transform: uppercase;
-padding: 10px 5px;
+padding: 0;
 margin: 0;
+}
+
+p.date a {
+display: block;
+padding: 10px 5px;
 }
 
 p.date span.day {
 font-size: 160%;
+color: #fff;
+}
+
+p.date span.month {
+color: #fff;
 }
 
 p.date span.year {
+font-size: 90%;
+color: #999;
+}
+
+p.date span.time {
 font-size: 80%;
 color: #999;
 }
 
-p.date.small {
+p.date.small a {
 padding: 3px 5px;
 }
 
-p.date.small span.day,
-p.date.small span.month {
-font-size: 75%;
+p.date.small .day,
+p.date.small .month {
+font-size: 85%
 }
 
 p.categories {
@@ -226,7 +245,7 @@ height: 120px;
 
 ul#navigation {
 list-style: none inside;
-padding: 2px 0 0 0;
+padding: 4px 0 0 0;
 margin: 0;
 color: #555;
 text-transform: uppercase;
