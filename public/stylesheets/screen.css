@@ -261,9 +261,13 @@ margin: 0 !important;
 }
 
 ul#people li {
-display: block;
+width: 50%;
 float: left;
-width: 25%;
+}
+
+ul#people li > p {
+padding: 0;
+margin: 0 0 0 60px;
 }
 
 ul.errors {
