@@ -1,13 +1,12 @@
 - unless @scrawls.length < 1
   %h2= "Scrawls (" + link_to("Add", url(:new_wallscrawl)) + ")"
   - for @scrawl in @scrawls
-    .scrawl{:id => 'scrawl-' + @scrawl.id.to_s}
+    .scrawl{:id => 'at-' + @scrawl.created_time}
       .shelf
         %p.date.small
-          %a{:href => url(:scrawls_by_day, @scrawl) + "#at-#{@scrawl.created_time}", :title => "Permalink for this scrawl."}
+          %a{:href => date_url_for(@scrawl, 'wallscrawl') + "#at-#{@scrawl.created_time}", :title => "Permalink for this scrawl."}
             %span.month= @scrawl.created_month_short_name
             %span.day= @scrawl.created_day
-            %span.time= @scrawl.created_time
       .contents
         %h3= link_to("#{@scrawl.person.login}:", url(:profile, @scrawl.person), :title => "View more about '#{h(@scrawl.person.login)}'.")
         = markup(@scrawl.contents)
