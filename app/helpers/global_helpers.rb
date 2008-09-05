@@ -21,5 +21,9 @@ module Merb
                         messages = "\n", object.errors.full_messages.collect { |message| tag('li', message) }.join("\n"), "\n"                        
                         tag('ul', messages, :class => error_class)
                 end
+                
+                def date_url_for(object, prefix)
+                        "/#{prefix}/#{object.created_year}/#{object.created_month}/#{object.created_day}"
+                end
         end
 end
