@@ -8,7 +8,6 @@ module Merb
                 def markup(string)
                         markdown = RDiscount.new(string)
                         
-                        markdown.smart = true
                         markdown.filter_html = true
                         markdown.filter_styles = true
                         
