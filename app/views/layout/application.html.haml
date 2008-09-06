@@ -3,6 +3,8 @@
   %head
     %title waferbaby
     = css_include_tag :screen, :media => :screen
+    - if catch_content(:atom_feed)
+      %link{:href => "feed://waferbaby.com" + catch_content(:atom_feed) + ".atom", :type => 'application/atom+xml', :rel => 'alternate', :title => "Atom feed"}
 
   %body
     #airlock
