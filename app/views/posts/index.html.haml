@@ -1,4 +1,5 @@
 - unless @posts.length < 1
+  - throw_content :atom_feed, "/posts"
   %h2 Ramblings
   - for @post in @posts
     = partial @post.type.to_s.snake_case

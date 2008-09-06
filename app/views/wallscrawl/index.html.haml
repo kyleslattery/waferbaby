@@ -1,4 +1,5 @@
 - unless @scrawls.length < 1
+  - throw_content :atom_feed, "/wallscrawl"
   %h2= "Scrawls (" + link_to("Add", url(:new_wallscrawl)) + ")"
   - for @scrawl in @scrawls
     .scrawl{:id => 'at-' + @scrawl.created_time}
