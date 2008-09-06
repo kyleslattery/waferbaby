@@ -8,7 +8,7 @@
   %entry
     %title= @scrawl.person.login
     %id= "urn:uuid:#{@scrawl.uuid}"
-    %link{:href => "http://waferbaby.com" + url(:wallscrawl, @scrawl)}
+    %link{:href => "http://waferbaby.com" + date_url_for(@scrawl, 'wallscrawl') + "#at-#{@scrawl.created_time}"}
     %updated= @scrawl.updated_at
     %published= @scrawl.created_at
     %author
