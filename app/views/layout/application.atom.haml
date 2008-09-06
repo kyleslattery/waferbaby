@@ -2,7 +2,7 @@
 %feed{:xmlns => 'http://www.w3.org/2005/Atom'}
   %title= catch_content :title
   %id= "urn:uuid:#{catch_content :uuid}"
-  %link{:href => "http://waferbaby.com" + catch_content(:url)}
+  %link{:href => "http://waferbaby.com" + catch_content(:url), :rel => 'self'}
   %updated= catch_content :updated
   %author
     %name= catch_content :author
