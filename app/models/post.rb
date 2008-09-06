@@ -10,6 +10,7 @@ class Post
         include DataMapper::Timestamp
         
         property :id,           Integer, :serial => true
+        property :uuid,         String, :length => 36
         property :slug,         String
         property :title,        String
         property :contents,     Text, :lazy => false
@@ -19,8 +20,13 @@ class Post
         
         has n,                  :categories, :through => Resource
         has n,                  :comments, :through => Resource
+        belongs_to              :person
         
         validates_present       :contents
         
         attr_accessor           :is_selected
+        
+        before :save do
+                self.uuid = UUID.generate
+        end
 end
