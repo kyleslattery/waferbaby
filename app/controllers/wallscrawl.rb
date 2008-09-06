@@ -1,6 +1,7 @@
 class Wallscrawl < Application
 
         before :login_required, :only => [:new, :edit, :delete, :create, :update, :destroy]
+        provides :atom, :text, :xml
         
         def index
                 @scrawls = Scrawl.all(:order => [:created_at.desc])
