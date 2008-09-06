@@ -1,0 +1,10 @@
+!!! XML
+%feed{:xmlns => 'http://www.w3.org/2005/Atom'}
+  %title= catch_content :title
+  %id= "urn:uuid:#{catch_content :uuid}"
+  %link{:href => "http://waferbaby.com" + catch_content(:url)}
+  %updated= catch_content :updated
+  %author
+    %name= catch_content :author
+
+  = catch_content :for_layout

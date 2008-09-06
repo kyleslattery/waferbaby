@@ -1,0 +1,10 @@
+%entry
+  %title= @post.title
+  %id= "urn:uuid:#{@post.uuid}"
+  %link{:href => "http://waferbaby.com" + date_url_for(@post, 'posts') + @post.slug}
+  %updated= @post.updated_at
+  %published= @post.created_at
+  %author
+    %name @post.person should go here :(
+  %content{:type => "xhtml"}
+    = markup(@post.contents)
