@@ -6,13 +6,13 @@
 
 - @scrawls.each do |@scrawl|
   %entry
-  %title= @scrawl.person.login
-  %id= "urn:uuid:#{@scrawl.uuid}"
-  %link{:href => "http://waferbaby.com" + url(:wallscrawl, @scrawl)}
-  %updated= @scrawl.updated_at
-  %published= @scrawl.created_at
-  %author
-    %name= @scrawl.person.login
-  %content{:type => "xhtml"}
-    %div{:xmlns => "http://www.w3.org/1999/xhtml"}
-      = markup(@scrawl.contents)
+    %title= @scrawl.person.login
+    %id= "urn:uuid:#{@scrawl.uuid}"
+    %link{:href => "http://waferbaby.com" + url(:wallscrawl, @scrawl)}
+    %updated= @scrawl.updated_at
+    %published= @scrawl.created_at
+    %author
+      %name= @scrawl.person.login
+    %content{:type => "xhtml"}
+      %div{:xmlns => "http://www.w3.org/1999/xhtml"}
+        = markup(@scrawl.contents)
