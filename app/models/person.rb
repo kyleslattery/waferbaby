@@ -9,6 +9,13 @@ class Person
         include MerbAuth::Adapter::DataMapper 
         include MerbAuth::Adapter::DataMapper::DefaultModelSetup
         
-        has n, :scrawls
+        property :uuid,         String, :length => 36
+        
         has n, :comments
+        has n, :posts
+        has n, :scrawls
+        
+        before :save do
+                self.uuid = UUID.generate
+        end
 end
