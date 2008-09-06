@@ -7,4 +7,5 @@
   %author
     %name @post.person should go here :(
   %content{:type => "xhtml"}
-    = markup(@post.contents)
+    %div{:xmlns => "http://www.w3.org/1999/xhtml"}
+      = markup(@post.contents)
