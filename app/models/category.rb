@@ -8,6 +8,7 @@ class Category
         include DataMapper::Timestamp
         
         property :id,           Integer, :serial => true
+        property :uuid,         String, :length => 36
         property :slug,         String
         property :name,         String
         property :created_at,   DateTime
@@ -17,4 +18,8 @@ class Category
         
         validates_present       :name
         validates_is_unique     :slug
+        
+        before :save do
+                self.uuid = UUID.generate
+        end
 end
