@@ -3,8 +3,10 @@
 # =>    Copyright (c) 2008 Daniel Bogan. http://waferbaby.com/
 #
 
+require 'categories_helper'
+
 class Posts < Application
-        provides :text, :xml
+        provides :atom, :text, :xml
 
         def index
                 @posts = Post.all(:order => [:created_at.desc])
