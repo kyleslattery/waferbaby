@@ -15,6 +15,8 @@ Merb::BootLoader.before_app_loads do
         
         Merb::Mailer.config             = {:sendmail_path => '/usr/sbin/sendmail'}
         Merb::Mailer.delivery_method    = :sendmail
+        
+        Merb.add_mime_type(:atom, :to_atom, %w[text/plain]) #application/atom+xml
 end
 
 Merb::BootLoader.after_app_loads do
@@ -37,4 +39,5 @@ dependency      'merb-auth'
 dependency      'merb-haml'
 dependency      'merb_helpers'
 dependency      'rdiscount'
+dependency      'uuid'
 dependency      'lib/timestamp_extensions'
