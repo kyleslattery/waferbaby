@@ -1,9 +1,13 @@
 Merb.logger.info("Compiling routes...")
 Merb::Router.prepare do |r|
-        r.add_slice(:MerbAuth, :path => '', :default_routes => false)
-
         r.match('/about').to(:controller => 'help', :action => 'show_about').name(:about)
-
+        r.match('/login').to(:controller => 'sessions', :action => 'new').name(:login)
+        r.match('/logout').to(:controller => 'sessions', :action => 'destroy').name(:logout)
+        r.match('/signup').to(:controller => 'people', :action => 'new').name(:signup)
+        
+        r.resources(:people, :keys => ['username']) do |people|
+        end
+        
         r.resources(:posts, :keys => ['created_year', 'created_month', 'created_day', 'slug']) do |posts|
                 posts.resources(:comments)
         end
