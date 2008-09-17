@@ -1,0 +1,9 @@
+- unless @people.length < 1
+  %h2 Peeps
+  %ul#people
+    - for @person in @people
+      %li
+        = link_to(@person.username, url(:person, @person))
+- else
+  %h2 Aw, I'm sorry!
+  %p There's no one here.

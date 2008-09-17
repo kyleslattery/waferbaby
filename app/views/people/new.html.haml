@@ -1,0 +1,10 @@
+%h2 Sign up
+%p Come and join the party. It's all happening here. Wee.
+
+= display_errors_for(@person)
+= form_for(@person, :action => url(:people)) do
+  %p= text_field(:username, :label => "Username:")
+  %p= text_field(:email_address, :label => "Email address:")
+  %p= password_field(:password, :label => "Password:")
+  %p= password_field(:password_confirmation, :label => "Password (confirm):")
+  %p.action= submit "Sign up"

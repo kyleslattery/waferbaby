@@ -1,0 +1,16 @@
+%h2= "Log in", session[:return_to] ? " first" : nil
+
+%p Comment, customise things.
+
+= form(:action => url(:login)) do
+  %p
+    %label{:for => 'username'} Username:
+    = text_field(:name => "username")
+  %p
+    %label{:for => 'password'} Password:
+    = password_field(:name => "password")
+  %p
+    %label{:for => 'remember_me'} Remember me:
+    = check_box(:name => 'remember_me')
+  %p.action
+    = submit('Log in')
