@@ -11,7 +11,7 @@ color: #fff !important;
 body {
 padding: 0;
 margin: 0 10px;
-background-color: #333;
+background-color: #282828;
 color: #ddd;
 text-align: center;
 font-family: verdana, arial, sans-serif;
@@ -40,15 +40,6 @@ font-size: 75%;
 
 div#content ul li, div#content ol li {
 margin: 4px 0 8px 0;
-}
-
-div#header {
-background-color: #000;
-border-right: solid 1px #444;
-border-bottom: solid 1px #444;
-border-left: solid 1px #444;
-padding: 15px;
-margin-bottom: 10px;
 }
 
 div.contents {
@@ -110,17 +101,19 @@ text-align: right;
 }
 
 h1 {
-float: left;
 padding: 0;
-margin: 0 20px 0 0;
+margin: 0;
 background-color: #000;
 color: #fff;
-text-align: center;
 text-transform: uppercase;
-font-size: 120%;
+font-size: 130%;
+border-right: solid 1px #444;
+border-left: solid 1px #444;
 }
 
 h1 a {
+display: block;
+padding: 50px 15px 15px 15px;
 color: #fff;
 }
 
@@ -128,7 +121,7 @@ h2 {
 padding: 0 0 5px 0;
 margin: 0 0 15px 0;
 text-transform: uppercase;
-font-size: 90%;
+font-size: 110%;
 font-weight: normal;
 color: #888;
 border-bottom: solid 1px #555;
@@ -245,11 +238,15 @@ height: 120px;
 
 ul#navigation {
 list-style: none inside;
-padding: 4px 0 0 0;
+padding: 8px 15px;
 margin: 0;
+background-color: #323235;
 color: #555;
 text-transform: uppercase;
-font-size: 80%;
+font-size: 70%;
+border-top: solid 1px #444;
+border-right: solid 1px #444;
+border-left: solid 1px #444;
 }
 
 ul#navigation li {
@@ -260,13 +257,8 @@ ul#navigation li.signup a {
 font-weight: bold;
 }
 
-ul#navigation li[selected] a {
-font-weight: bold;
-color: #0099ff;
-}
-
 ul#navigation li:before {
-content: "/ ";
+content: "| ";
 }
  
 ul#navigation li:first-child:before {
@@ -282,11 +274,6 @@ margin: 0 !important;
 ul#people li {
 width: 50%;
 float: left;
-}
-
-ul#people li > p {
-padding: 0;
-margin: 0 0 0 60px;
 }
 
 ul.errors {
