@@ -5,27 +5,26 @@
     = css_include_tag :screen, :media => :screen
     - if catch_content(:atom_feed)
       %link{:href => "http://waferbaby.com" + catch_content(:atom_feed) + ".atom", :type => 'application/atom+xml', :rel => 'alternate', :title => "Atom feed"}
-
   %body
     #airlock
-      #header
-        %h1
-          %a.posts{:href => url(:posts), :title => "View the latest drivel."} waferbaby
-        %ul#navigation
-          %li.wallscrawl
-            = link_to("'scrawl", url(:wallscrawl), :title => "The voice of the unwashed masses.")
-          %li.people
-            = link_to("People", url(:people), :title => "The humans what make the site.")
-          %li.about
-            = link_to("Eh?", url(:about), :title => "The most useless page like, wow, evar.")
-          - unless logged_in?
-            %li.login
-              = link_to("Log in", url(:login), :title => "Sign into your account.")
-            %li.signup
-              = link_to("Sign up", url(:signup), :title => "Carve your name into the community.")
-          - else
-            %li.logout
-              = link_to("Log out", url(:logout), :title => "Don't leave me!")
+      %h1
+        %a.posts{:href => url(:posts), :title => "View the latest drivel."} waferbaby
+      %ul#navigation
+        %li.wallscrawl
+          = link_to("'scrawl", url(:wallscrawl), :title => "The voice of the unwashed masses.")
+        %li.people
+          = link_to("Stalk people", url(:people), :title => "Them humans what make the site good.")
+        - unless logged_in?
+          %li.login
+            = link_to("Log in", url(:login), :title => "Sign into your account.")
+          %li.signup
+            = link_to("Sign up", url(:signup), :title => "Carve your name into the community.")
+        - else
+          %li.logout
+            = link_to("Log out", url(:logout), :title => "Don't leave me!")
       #content
         = catch_content :for_layout
-        %p#footer This is waferbaby. Sorry about that.
+        %p#footer
+          This is waferbaby
+          = "(", link_to("More", url(:about), :title => "The most useless page like, wow, evar."), ")."
+          Sorry about that.
