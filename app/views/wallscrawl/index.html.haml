@@ -9,7 +9,7 @@
             %span.month= @scrawl.created_month_short_name
             %span.day= @scrawl.created_day
       .contents
-        %h3= link_to("#{@scrawl.person.username}:", url(:people, @scrawl.person), :title => "View more about '#{h(@scrawl.person.username)}'.")
+        %h3= link_to("#{@scrawl.person.username}:", url(:person, @scrawl.person), :title => "View more about '#{h(@scrawl.person.username)}'.")
         = markup(@scrawl.contents)
 - else
   %h2 Aw, I'm sorry!
