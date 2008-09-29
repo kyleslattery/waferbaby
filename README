@@ -1,20 +1,21 @@
 README
 ------
 
-This is the source code for waferbaby.com (being the fifth version out of scores of revisions over the years).
+This is the source code for waferbaby.com (being the 'official' fifth version out of scores of revisions over the years).
 
-It's a Merb app. Merb is a nice little MVC framework written in Ruby. You might like it! It likes you.
+It's a Merb application. Merb is a nice little web framework written in Ruby. You might like it! It likes you. Really, it told me.
 
-	http://merbivore.com/ (nb: waferbaby sits on top of the 0.94+ nightly builds)
+	http://merbivore.com/ (nb: waferbaby currently uses v0.97 at the time of writing)
 
-waferbaby also uses the following gems:
+And waferbaby also uses the following gems:
 
 	* DataMapper (a nice ORM)
-	* RDiscount (for Markdown)
-	* Merb-Auth (the user system)
+	* HAML (for the static HTML markup)
+	* RDiscount (for dynamic markup via Markdown)
+	* UUID (for generating unique goodness)
 	
-I'm offering the code up to the world with the hope that someone, somewhere will find it vaguely useful.
+I'm offering up the whole codebase to the world with the vague hope that someone, somewhere will find it useful.
 
 Enjoy!
 
-<3, daniel.
+<3, daniel bogan.
