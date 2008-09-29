@@ -1,8 +1,8 @@
 - throw_content :title, "waferbaby"
 - throw_content :uuid, "31b0b8f6-cd25-102b-9c8e-1597b8d4fc74"
 - throw_content :url, "/"
-- throw_content :author, @posts[0].person.login
+- throw_content :author, @posts[0].person.username
 - throw_content :updated, @posts[0].updated_at
 
 - @posts.each do |@post|
-  = partial @post.type.to_s.snake_case
+  = partial :post
