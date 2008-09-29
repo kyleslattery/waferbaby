@@ -14,7 +14,6 @@ class Post
         property :slug,         String
         property :title,        String
         property :contents,     Text, :lazy => false
-        property :type,         Discriminator
         property :created_at,   DateTime
         property :updated_at,   DateTime
         
