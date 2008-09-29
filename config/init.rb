@@ -17,6 +17,7 @@ end
 dependency      'dm-aggregates'
 dependency      'dm-timestamps'
 dependency      'dm-validations'
+dependency      'md5'
 dependency      'merb-action-args'
 dependency      'merb-assets'
 dependency      'merb-haml'
