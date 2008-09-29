@@ -2,15 +2,7 @@
   - throw_content :atom_feed, "/wallscrawl"
   %h2= "Scrawls (" + link_to("Add", url(:new_wallscrawl)) + ")"
   - for @scrawl in @scrawls
-    .scrawl{:id => 'at-' + @scrawl.created_time}
-      .shelf
-        %p.date.small
-          %a{:href => date_url_for(@scrawl, 'wallscrawl') + "#at-#{@scrawl.created_time}", :title => "Permalink for this scrawl."}
-            %span.month= @scrawl.created_month_short_name
-            %span.day= @scrawl.created_day
-      .contents
-        %h3= link_to("#{@scrawl.person.username}:", url(:person, @scrawl.person), :title => "View more about '#{h(@scrawl.person.username)}'.")
-        = markup(@scrawl.contents)
+    = partial :scrawl
 - else
   %h2 Aw, I'm sorry!
   %p There are no scrawls here.
