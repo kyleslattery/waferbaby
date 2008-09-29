@@ -2,7 +2,7 @@
   - throw_content :atom_feed, "/posts"
   %h2 Ramblings
   - for @post in @posts
-    = partial @post.type.to_s.snake_case
+    = partial :post
 - else
   %h2 Aw, I'm sorry!
   %p There are no posts here.
