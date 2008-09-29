@@ -22,11 +22,20 @@ class Post
         has n,                  :comments, :through => Resource
         belongs_to              :person
         
-        validates_present       :contents
+        validates_is_unique     :slug
+        validates_present       :title, :contents
         
         attr_accessor           :is_selected
         
         before :save do
-                self.uuid = UUID.generate
+                if new_record?
+                        self.uuid = UUID.generate                        
+                        self.slug = Iconv.iconv('ascii//translit//IGNORE', 'utf-8', self.title).to_s
+
+                        self.slug.gsub!(/\W+/, ' ')
+                        self.slug.strip!
+                        self.slug.downcase!
+                        self.slug.gsub!(/\s+/, '-')
+                end
         end
 end
