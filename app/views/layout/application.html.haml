@@ -1,15 +1,19 @@
 !!! Strict
 %html{html_attrs}
   %head
-    %title waferbaby
+    %title
+      waferbaby
+      - if catch_content(:title)
+        = catch_content(:title)
     = css_include_tag :screen, :media => :screen
     - if catch_content(:atom_feed)
       %link{:href => "http://waferbaby.com" + catch_content(:atom_feed) + ".atom", :type => 'application/atom+xml', :rel => 'alternate', :title => "Atom feed"}
   %body
     #airlock
-      %h1
-        %a.posts{:href => url(:posts), :title => "View the latest drivel."} waferbaby
+      %h1 waferbaby
       %ul#navigation
+        %li.home
+          = link_to("Read crap", url(:posts), :title => "View the latest drivel.")
         %li.wallscrawl
           = link_to("'scrawl", url(:wallscrawl), :title => "The voice of the unwashed masses.")
         %li.people
