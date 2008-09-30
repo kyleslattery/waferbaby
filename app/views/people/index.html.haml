@@ -1,7 +1,7 @@
 - unless @people.length < 1
   %h2 Peeps
   %ul#people
-    - for @person in @people
+    - @people.each do |@person|
       %li
         = link_to(@person.username, url(:person, @person))
 - else
