@@ -1,7 +1,7 @@
 - unless @posts.length < 1
   - throw_content :atom_feed, "/posts"
   %h2 Ramblings
-  - for @post in @posts
+  - @posts.each do |@post|
     = partial :post
 - else
   %h2 Aw, I'm sorry!
