@@ -9,7 +9,7 @@ class Posts < Application
         provides :atom, :text, :xml
 
         def index
-                @posts = Post.all(:order => [:created_at.desc])
+                @posts = Post.all(:order => [:created_at.desc], :limit => 10)
                 display @posts
         end
         
