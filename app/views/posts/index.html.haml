@@ -1,3 +1,5 @@
+%h2 Recently
+#note= part(NotePart => :show_latest)
 - unless @posts.length < 1
   - throw_content :atom_feed, "/posts"
   %h2 Ramblings
