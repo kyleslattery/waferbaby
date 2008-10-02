@@ -42,6 +42,15 @@ div#content ul li, div#content ol li {
 margin: 4px 0 8px 0;
 }
 
+div#note {
+font-size: 85%;
+margin-bottom: 10px;
+}
+
+div#note p {
+display: inline;
+}
+
 div.contents {
 margin-left: 65px;
 }
@@ -58,34 +67,10 @@ padding: 10px 0;
 border-top: solid 1px #444;
 }
 
-div.post:first-child {
-background: red;
-}
-
-div.post.micro div.contents {
-font-size: 85%;
-}
-
-div.post.micro div.contents p {
-display: inline;
-}
-
-div.post.micro span.categories {
-font-size: 90%;
-}
-
-div.post.micro span.categories:after {
-content: ")";
-}
-
-div.post.micro span.categories:before {
-content: "(";
-}
-
 div.shelf {
 float: left;
 text-align: center;
-width: 50px;
+width: 40px;
 font-size: 80%;
 margin-bottom: 10px;
 background-color: #444;
@@ -112,6 +97,7 @@ border-left: solid 1px #444;
 }
 
 h2 {
+clear: left;
 padding: 0 0 5px 0;
 margin: 0 0 15px 0;
 text-transform: uppercase;
@@ -181,7 +167,7 @@ margin: 0;
 
 p.date a {
 display: block;
-padding: 10px 5px;
+padding: 10px 0;
 }
 
 p.date span.day {
@@ -208,8 +194,9 @@ padding: 3px 5px;
 }
 
 p.date.small .day,
-p.date.small .month {
-font-size: 85%
+p.date.small .month,
+p.date.small .year {
+font-size: 100%
 }
 
 p.categories {
