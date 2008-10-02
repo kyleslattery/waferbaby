@@ -1,18 +1,18 @@
 - throw_content :title, "waferbaby"
 - throw_content :uuid, "3ad279cc-cd4a-102b-ab26-4f4f9f3117df"
 - throw_content :url, "/wallscrawl"
-- throw_content :author, @scrawls[0].person.login
+- throw_content :author, "Everyone on waferbaby"
 - throw_content :updated, @scrawls[0].updated_at
 
 - @scrawls.each do |@scrawl|
   %entry
-    %title= @scrawl.person.login
+    %title= @scrawl.person.username
     %id= "urn:uuid:#{@scrawl.uuid}"
     %link{:href => "http://waferbaby.com" + date_url_for(@scrawl, 'wallscrawl') + "#at-#{@scrawl.created_time}"}
     %updated= @scrawl.updated_at
     %published= @scrawl.created_at
     %author
-      %name= @scrawl.person.login
+      %name= @scrawl.person.username
     %content{:type => "xhtml"}
       %div{:xmlns => "http://www.w3.org/1999/xhtml"}
         = markup(@scrawl.contents)
