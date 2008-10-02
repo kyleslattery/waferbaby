@@ -5,6 +5,8 @@
 
 module Merb
         module GlobalHelpers
+                include Merb::PeopleHelper
+                
                 def markup(string)
                         markdown = RDiscount.new(string)
                         
