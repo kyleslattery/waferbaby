@@ -4,7 +4,7 @@ class Wallscrawl < Application
         provides :atom, :text, :xml
         
         def index
-                @scrawls = Scrawl.all(:order => [:created_at.desc])
+                @scrawls = Scrawl.all(:order => [:created_at.desc], :limit => 20)
                 display @scrawls
         end
         
@@ -48,9 +48,15 @@ class Wallscrawl < Application
                 @scrawl = Scrawl.new(params[:scrawl])
                 @scrawl.person = current_person
                 
-                if @scrawl.save
+                @show_preview = !params[:preview].nil?
+                
+                if !@show_preview && @scrawl.save
                         redirect url(:wallscrawl)
                 else
+                        if @show_preview
+                                @scrawl.created_at = @scrawl.updated_at = Time.now
+                        end
+                        
                         render :new
                 end
         end
