@@ -21,8 +21,9 @@ class People < Application
 
         def edit
                 only_provides :html
-                @person = Person.get(params[:id])
-                raise NotFound unless @person
+                @person = Person.first(:username => params[:username])
+                raise NotFound unless this_is_me(@person)
+
                 render
         end
 
@@ -36,8 +37,8 @@ class People < Application
         end
 
         def update
-                @person = Person.get(params[:id])
-                raise NotFound unless @person
+                @person = Person.get(params[:username])
+                raise NotFound unless this_is_me(@person)
                 if @person.update_attributes(params[:person]) || !@person.dirty?
                         redirect url(:person, @person)
                 else
@@ -46,13 +47,17 @@ class People < Application
         end
 
         def destroy
-                @person = Person.get(params[:id])
-                raise NotFound unless @person
+                @person = Person.get(params[:username])
+                raise NotFound unless this_is_me(@person)
                 if @person.destroy
                         redirect url(:person)
                 else
                         raise BadRequest
                 end
+        end
+        
+        def this_is_me(person)
+                person && person == current_person
         end
 
 end
