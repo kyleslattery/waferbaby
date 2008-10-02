@@ -8,9 +8,6 @@ use_test                        :rspec
 use_template_engine             :haml
 
 Merb::BootLoader.before_app_loads do
-        Merb::Mailer.config             = {:sendmail_path => '/usr/sbin/sendmail'}
-        Merb::Mailer.delivery_method    = :sendmail
-        
         Merb.add_mime_type(:atom, :to_atom, %w[application/atom+xml])
 end
 
@@ -18,6 +15,7 @@ dependency      'dm-aggregates'
 dependency      'dm-timestamps'
 dependency      'dm-validations'
 dependency      'md5'
+dependency      'merb-parts'
 dependency      'merb-action-args'
 dependency      'merb-assets'
 dependency      'merb-haml'
