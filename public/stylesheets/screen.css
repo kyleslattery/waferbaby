@@ -20,16 +20,19 @@ font-size: 15px;
 
 div#airlock {
 clear: left;
-max-width: 500px;
+width: 720px;
 margin: auto;
 text-align: left;
+background-color: #3a3a3a;
+border-right: solid 1px #222;
+border-bottom: solid 1px #222;
+border-left: solid 1px #222;
 }
 
 div#content {
-clear: left;
-padding: 20px;
-background-color: #3a3a3a;
-border: solid 1px #444;
+float: left;
+width: 450px;
+padding: 20px 0 20px 20px;
 font-size: 80%;
 }
 
@@ -42,13 +45,49 @@ div#content ul li, div#content ol li {
 margin: 4px 0 8px 0;
 }
 
-div#note {
-font-size: 85%;
-margin-bottom: 10px;
+div#header {
+background: url('/images/headers/1.jpg') no-repeat;
+padding: 150px 0 0 0;
 }
 
-div#note p {
+div#header ul#navigation {
+list-style: none inside;
+padding: 10px 15px;
+margin: 0;
+background-color: #222;
+color: #555;
+text-transform: uppercase;
+font-size: 90%;
+}
+
+div#header ul#navigation li {
 display: inline;
+}
+
+div#header ul#navigation li.signup a {
+font-weight: bold;
+}
+
+div#header ul#navigation li:before {
+content: "/ ";
+}
+ 
+div#header ul#navigation li:first-child:before {
+content:"";
+}
+
+div#sidebar {
+float: left;
+width: 200px;
+padding: 20px;
+font-size: 80%;
+}
+
+div#sidebar ul {
+list-style: none inside;
+font-size: 80%;
+padding: 0;
+margin: 0;
 }
 
 div.contents {
@@ -86,18 +125,19 @@ text-align: right;
 }
 
 h1 {
-padding: 50px 15px 15px 15px;
+float: left;
+padding: 8px 15px 0 15px;
 margin: 0;
-background-color: #000;
 color: #fff;
 text-transform: uppercase;
-font-size: 130%;
-border-right: solid 1px #444;
-border-left: solid 1px #444;
+font-size: 110%;
+}
+
+h1 > a {
+color: #fff;
 }
 
 h2 {
-clear: left;
 padding: 0 0 5px 0;
 margin: 0 0 15px 0;
 text-transform: uppercase;
@@ -153,10 +193,10 @@ padding-top: 10px;
 
 p#footer {
 clear: both;
-padding: 10px 0 0 0;
+padding: 15px;
 margin: 0;
 color: #666;
-font-size: 80%;
+font-size: 70%;
 }
 
 p.date {
@@ -215,35 +255,6 @@ content: "Filed under ";
 textarea {
 width: 100%;
 height: 120px;
-}
-
-ul#navigation {
-list-style: none inside;
-padding: 8px 15px;
-margin: 0;
-background-color: #323235;
-color: #555;
-text-transform: uppercase;
-font-size: 70%;
-border-top: solid 1px #444;
-border-right: solid 1px #444;
-border-left: solid 1px #444;
-}
-
-ul#navigation li {
-display: inline;
-}
-
-ul#navigation li.signup a {
-font-weight: bold;
-}
-
-ul#navigation li:before {
-content: "| ";
-}
- 
-ul#navigation li:first-child:before {
-content:"";
 }
 
 ul#people {
