@@ -4,6 +4,5 @@
       %a{:href => date_url_for(@note, 'notes'), :title => "View all posts from #{@note.created_month_short_name} #{@note.created_day}, #{@note.created_year}."}
         %span.month= @note.created_month_short_name
         %span.day= @note.created_day
-        %span.year= @note.created_year
   .contents
     = markup(@note.contents)
